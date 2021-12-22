@@ -1,10 +1,8 @@
 import requests
-#lấy và định dạng ngày:
 from datetime import date
 today = (date.today())
 d1 = today.strftime("%d/%m/%Y")
 def update():
-    #lấy dữ liệu từ web:
     url = 'https://static.pipezero.com/covid/data.json'
     web_r = requests.get(url)
     data = web_r.json()
@@ -35,7 +33,6 @@ def update():
     print(f"số ca nhiễm: {internal_case}(chiếm {vietnam}% số ca nhiễm trên toàn thế giới)", '\n' f"tử vong: {internal_death}(chiếm {tuvong}% số ca nhiễm tại Việt Nam và {tuvong2}% số ca nhiễm trên toàn thế giới) ",'\n' f"đã chữa khỏi: {internal_recovered}(chiếm {khoibenh}% số ca nhiễm tại Việt Nam và {khoibenh2}% số ca nhiễm trên toàn thế giới)\n")
     print(row*20)
 update()
-#số mũi vắc-xin đã tiêm
 while True:
     try:
         vacxin = int(input("\nBạn đã tiêm được bao nhiêu mũi vắc-xin phòng chống covid rồi : "))
