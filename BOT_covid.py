@@ -19,7 +19,7 @@ def update():
     print(f"số ca nhiễm: {cases}",'\n' f"tử vong: {death}(chiếm {tu_vong}% số ca nhiễm) ",'\n' f"đã chữa khỏi: {recovered}(chiếm {khoi}% số ca nhiễm)\n")
     row='*****'
     print(row*20)
-    #về tình hình dịch bệnh trong nước từ trang web:
+    #lấy thông tin về tình hình dịch bệnh trong nước từ trang web:
     total = data["total"]
     internal = total["internal"]
     internal_death = (internal["death"])
